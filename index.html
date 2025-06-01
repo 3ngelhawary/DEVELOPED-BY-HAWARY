@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>My App Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="https://github.com/3ngelhawary/Developed-By-A-ElHawary/raw/main/HAWARY.png">
   <style>
     body {
       background: #f6f8fa;
@@ -78,6 +79,12 @@
     .download-btn:hover {
       background: #163780;
     }
+    .counter-label {
+      color: #555;
+      font-size: 0.98rem;
+      margin-top: 7px;
+      margin-bottom: 0px;
+    }
     @media (max-width: 600px) {
       .container { padding: 18px 5px 14px 5px; }
       h1 { font-size: 1.35rem; }
@@ -97,9 +104,26 @@
           DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, and export-ready for DXF.
         </span>
         <a href="https://github.com/3ngelhawary/DETECT-PIPE-CLASHES" class="download-btn" target="_blank">View Source</a>
-        <a href="https://github.com/3ngelhawary/DETECT-PIPE-CLASHES/raw/refs/heads/main/DETECTPIPECLASHES.dll" class="download-btn" download>Download (DLL)</a>
+        <a 
+          href="https://github.com/3ngelhawary/DETECT-PIPE-CLASHES/raw/refs/heads/main/DETECTPIPECLASHES.dll"
+          class="download-btn"
+          id="dll-download-btn"
+          download
+          onclick="incrementCounter()"
+        >Download (DLL)</a>
+        <div class="counter-label">
+          Downloads: <span id="download-counter">
+            <img src="https://api.simplecounter.io/score/3ngelhawary-detectpipeclashes?style=flat&tag=download" style="vertical-align:middle; height:1.2em;">
+          </span>
+        </div>
       </li>
     </ul>
   </div>
+  <script>
+    function incrementCounter() {
+      // This triggers the simplecounter.io increment
+      fetch('https://api.simplecounter.io/increment/3ngelhawary-detectpipeclashes?tag=download').catch(()=>{});
+    }
+  </script>
 </body>
 </html>
