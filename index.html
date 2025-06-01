@@ -1,17 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My App Library</title>
-  </head>
-  <body>
-    <h1>Download My Apps</h1>
-    <ul>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(60,60,60,0.12);
+      padding: 32px 24px 24px 24px;
+      text-align: center;
+    }
+    h1 {
+      color: #232b38;
+      margin-bottom: 18px;
+      font-size: 2.1rem;
+      letter-spacing: 1px;
+    }
+    .app-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0 0;
+    }
+    .app-list li {
+      background: #f0f4f8;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      padding: 18px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(120,120,120,0.04);
+    }
+    .app-title {
+      font-weight: bold;
+      font-size: 1.12rem;
+      color: #222;
+      margin-bottom: 7px;
+    }
+    .app-desc {
+      font-size: 0.97rem;
+      color: #626e85;
+      margin-bottom: 12px;
+      max-width: 320px;
+    }
+    .download-btn {
+      background: #2363eb;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      margin-top: 5px;
+      box-shadow: 0 2px 8px rgba(35,99,235,0.09);
+    }
+    .download-btn:hover {
+      background: #163780;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 18px 5px 14px 5px; }
+      h1 { font-size: 1.35rem; }
+      .app-list li { padding: 11px 6px; }
+      .app-title { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My App Library</h1>
+    <ul class="app-list">
       <li>
-        <a href="https://yourdownloadlink.com/app1.apk" download>Download App 1</a>
+        <span class="app-title">App 1: ToDo Manager</span>
+        <span class="app-desc">Organize your daily tasks efficiently. Lightweight, easy-to-use, and works offline.</span>
+        <a href="https://yourlink.com/app1.apk" class="download-btn" download>Download (Android APK)</a>
       </li>
       <li>
-        <a href="https://yourdownloadlink.com/app2.exe" download>Download App 2</a>
+        <span class="app-title">App 2: Notes Pro</span>
+        <span class="app-desc">A fast, beautiful note-taking app with sync and export features.</span>
+        <a href="https://yourlink.com/app2.exe" class="download-btn" download>Download (Windows)</a>
+      </li>
+      <li>
+        <span class="app-title">App 3: Weather Now</span>
+        <span class="app-desc">Real-time local weather updates with a minimal design. No ads, privacy-first.</span>
+        <a href="https://yourlink.com/app3.zip" class="download-btn" download>Download (ZIP)</a>
       </li>
     </ul>
-  </body>
+  </div>
+</body>
 </html>
