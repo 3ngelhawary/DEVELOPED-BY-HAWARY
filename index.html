@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>By Hawary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png">
+  <link rel="icon" type="image/png"
+        href="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png">
   <style>
     body {
       background: #f6f8fa;
@@ -13,12 +14,12 @@
       padding: 0;
     }
     .container {
-      max-width: 500px;
+      max-width: 960px;
       margin: 50px auto;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(60,60,60,0.12);
-      padding: 32px 24px 24px 24px;
+      padding: 32px;
       text-align: center;
     }
     .logo {
@@ -28,15 +29,17 @@
       box-shadow: 0 4px 20px rgba(40,40,40,0.12);
     }
     .app-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
       list-style: none;
       padding: 0;
       margin: 0;
     }
     .app-list li {
       background: #f0f4f8;
-      margin-bottom: 20px;
       border-radius: 8px;
-      padding: 18px 12px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -46,120 +49,108 @@
       font-weight: bold;
       font-size: 1.12rem;
       color: #222;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
     .app-desc {
       font-size: 0.97rem;
       color: #626e85;
-      margin-bottom: 12px;
-      max-width: 320px;
+      margin-bottom: 16px;
+      max-width: 260px;
     }
-    .download-btn, .linkedin-btn, .youtube-btn {
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .action-buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .btn {
       display: inline-block;
-    }
-    .download-btn {
-      background: #2363eb;
-    }
-    .download-btn:hover {
-      background: #163780;
+      height: 28px;
+      line-height: 28px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 0 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: background 0.2s;
+      flex: 1; /* allow equal width */
+      text-align: center;
     }
     .linkedin-btn {
-      background: #0A66C2; /* LinkedIn official blue */
+      background: #0A66C2;
     }
     .linkedin-btn:hover {
       background: #004182;
     }
     .youtube-btn {
-      background: #FF0000; /* YouTube official red */
+      background: #FF0000;
     }
     .youtube-btn:hover {
       background: #CC0000;
     }
-    .counter-label {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      justify-content: center;
+    .counter-img {
+      height: 28px;
+      flex: 1;
+      object-fit: contain;
     }
-    .action-buttons {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 8px;
+    @media (max-width: 800px) {
+      .container { padding: 24px; }
+      .app-list { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 600px) {
-      .container { padding: 18px 10px; }
-      .app-title { font-size: 1rem; }
-      .download-btn, .linkedin-btn, .youtube-btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-      }
+    @media (max-width: 500px) {
+      .app-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png" alt="Logo" class="logo">
+    <img src="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png"
+         alt="Logo" class="logo">
+
     <ul class="app-list">
-
-      <!-- First Tool -->
+      <!-- DETECT-PIPE-CLASHES -->
       <li>
-        <span class="app-title">DETECT-PIPE-CLASHES</span>
-        <span class="app-desc">
-          DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, and export-ready for DXF.
-        </span>
-        <div class="counter-label">
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/DETECT-PIPE-CLASHES/total?label=Downloads&style=flat-square" alt="Download count">
+        <div class="app-title">DETECT-PIPE-CLASHES</div>
+        <div class="app-desc">
+          DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, export-ready for DXF.
         </div>
         <div class="action-buttons">
-          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
-          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
+          <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
+          <img src="https://img.shields.io/github/downloads/3ngelhawary/DETECT-PIPE-CLASHES/total?label=Downloads&style=flat-square"
+               alt="Downloads" class="counter-img">
+          <a href="YOUR_YOUTUBE_URL" class="btn youtube-btn">YouTube</a>
         </div>
       </li>
 
-      <!-- Second Tool -->
+      <!-- SWMM-CLASH-TEST -->
       <li>
-        <span class="app-title">SWMM-CLASH-TEST</span>
-        <span class="app-desc">
-          Standalone EXE for testing SWMM clash detection logic with a GUI interface. Suitable for prototyping and debugging SWMM clash scenarios.
-        </span>
-        <div class="counter-label">
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-CLASH-TEST/total?label=Downloads&style=flat-square" alt="Download count">
+        <div class="app-title">SWMM-CLASH-TEST</div>
+        <div class="app-desc">
+          Standalone EXE for testing SWMM clash detection logic with a GUI interface. Ideal for prototyping and debugging SWMM clash scenarios.
         </div>
         <div class="action-buttons">
-          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
-          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
+          <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
+          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-CLASH-TEST/total?label=Downloads&style=flat-square"
+               alt="Downloads" class="counter-img">
+          <a href="YOUR_YOUTUBE_URL" class="btn youtube-btn">YouTube</a>
         </div>
       </li>
 
-      <!-- Third Tool -->
+      <!-- SWMM-BOQ -->
       <li>
-        <span class="app-title">SWMM-BOQ</span>
-        <span class="app-desc">
-          Utility for generating comprehensive Bill of Quantities (BOQ) from SWMM .inp files—covers conduit, lateral, structure, and backdrop reports with customizable criteria and Excel export.
-        </span>
-        <div class="counter-label">
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-BOQ/total?label=Downloads&style=flat-square" alt="Download count">
+        <div class="app-title">SWMM-BOQ</div>
+        <div class="app-desc">
+          Utility for generating comprehensive Bill of Quantities from SWMM .inp files—conduit, lateral, structure, backdrop reports with Excel export.
         </div>
         <div class="action-buttons">
-          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
-          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
+          <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
+          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-BOQ/total?label=Downloads&style=flat-square"
+               alt="Downloads" class="counter-img">
+          <a href="YOUR_YOUTUBE_URL" class="btn youtube-btn">YouTube</a>
         </div>
       </li>
-
     </ul>
   </div>
 </body>
