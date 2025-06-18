@@ -7,10 +7,12 @@
   <link rel="icon" type="image/png"
         href="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png">
   <style>
-    body {
+    /* ---------- PAGE & CONTAINER ---------- */
+    body{
       background:#f6f8fa;
       font-family:'Segoe UI',Arial,sans-serif;
-      margin:0;padding:0;
+      margin:0;
+      padding:0;
     }
     .container{
       max-width:960px;
@@ -18,7 +20,8 @@
       background:#fff;
       border-radius:12px;
       box-shadow:0 4px 16px rgba(60,60,60,.12);
-      padding:32px;text-align:center;
+      padding:32px 32px 72px;        /* extra 40 px bottom padding */
+      text-align:center;
     }
     .header-logo{
       width:100%;height:auto;margin-bottom:24px;
@@ -26,62 +29,61 @@
       box-shadow:0 4px 20px rgba(40,40,40,.12);
     }
 
-    /* grid of cards */
+    /* ---------- GRID OF CARDS ---------- */
     .app-list{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:20px;
-      list-style:none;padding:0;margin:0;
-      grid-auto-rows:1fr;           /* equal card heights per row */
+      column-gap:20px;               /* side-to-side */
+      row-gap:40px;                  /* extra vertical gap → shadows never touch */
+      list-style:none;
+      padding:0;margin:0;
+      grid-auto-rows:1fr;            /* equal height per row */
     }
 
-    /* single card */
+    /* ---------- INDIVIDUAL CARD ---------- */
     .app-list li{
       background:#f0f4f8;
-      border-radius:8px;padding:18px;
-      display:flex;flex-direction:column;
-      align-items:flex-start;height:100%;
-      box-shadow:0 2px 6px rgba(120,120,120,.04);
+      border-radius:8px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      height:100%;                   /* stretch to row height */
+      box-shadow:0 2px 6px rgba(120,120,120,.06);
     }
 
-    /* content area */
+    /* title + clamped 3-line description */
     .app-content{width:100%;text-align:left;}
     .app-title{
       font-weight:700;font-size:1.12rem;color:#222;margin-bottom:4px;
     }
     .app-desc{
-      font-size:.95rem;color:#626e85;
-      line-height:1.4em;
-      overflow:hidden;                 /* 3-line clamp */
-      display:-webkit-box;
-      -webkit-line-clamp:3;
-      -webkit-box-orient:vertical;
-      min-height:calc(1.4em*3);        /* reserve exactly 3 lines */
+      font-size:.95rem;color:#626e85;line-height:1.4em;
+      overflow:hidden;display:-webkit-box;
+      -webkit-line-clamp:3;-webkit-box-orient:vertical;
+      min-height:calc(1.4em*3);      /* reserve exactly 3 lines */
     }
 
-    /* buttons */
+    /* ---------- BUTTON BAR ---------- */
     .action-buttons{
       width:100%;
       display:flex;align-items:center;justify-content:space-between;
       gap:8px;
-      margin-top:1.2em;                /* one free line (≈ line-height) */
+      margin-top:1.2em;              /* one blank line below description */
     }
     .btn,.counter-img{flex:1;height:28px;text-align:center;}
     .btn{
       display:inline-block;line-height:28px;border-radius:4px;
       font-size:.9rem;font-weight:700;text-decoration:none;color:#fff;
-      padding:0 12px;box-shadow:0 2px 8px rgba(0,0,0,.1);
-      transition:background .2s;
+      padding:0 12px;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:background .2s;
     }
-    .linkedin-btn{background:#0A66C2;}
-    .linkedin-btn:hover{background:#004182;}
-    .youtube-btn{background:#FF0000;}
-    .youtube-btn:hover{background:#CC0000;}
+    .linkedin-btn{background:#0A66C2;} .linkedin-btn:hover{background:#004182;}
+    .youtube-btn{background:#FF0000;} .youtube-btn:hover{background:#CC0000;}
     .counter-img{object-fit:contain;}
 
-    /* mobile */
+    /* ---------- MOBILE STACK ---------- */
     @media(max-width:800px){
-      .container{padding:24px;}
+      .container{padding:24px 24px 60px;}
       .app-list{grid-template-columns:1fr;}
     }
   </style>
