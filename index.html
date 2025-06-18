@@ -31,6 +31,8 @@
       border-radius: 8px;
       box-shadow: 0 4px 20px rgba(40,40,40,0.12);
     }
+
+    /* --- GRID LIST ------------------------------------------------------- */
     .app-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -38,16 +40,24 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      /* NEW: make every row’s tracks share the tallest height */
+      grid-auto-rows: 1fr;
     }
+
+    /* --- INDIVIDUAL APP CARD -------------------------------------------- */
     .app-list li {
       background: #f0f4f8;
       border-radius: 8px;
       padding: 18px;
+      /* NEW: full-height flex column so buttons stick to the bottom */
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: flex-start;
+      height: 100%;
       box-shadow: 0 2px 6px rgba(120,120,120,0.04);
     }
+
     .app-content {
       width: 100%;
       text-align: left;
@@ -63,6 +73,8 @@
       font-size: 0.95rem;
       color: #626e85;
     }
+
+    /* --- BUTTONS ---------------------------------------------------------- */
     .action-buttons {
       width: 100%;
       display: flex;
@@ -103,6 +115,8 @@
     .youtube-btn:hover {
       background: #CC0000;
     }
+
+    /* --- RESPONSIVE ------------------------------------------------------- */
     @media (max-width: 800px) {
       .container { padding: 24px; }
       .app-list { grid-template-columns: 1fr; }
@@ -111,7 +125,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- main header image (DRH.png) spans full width -->
+    <!-- main header image spans full width -->
     <img src="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/DRH.png"
          alt="By Hawary" class="header-logo">
 
@@ -139,7 +153,7 @@
         <div class="app-content">
           <div class="app-title">SWMM-CLASH-TEST</div>
           <div class="app-desc">
-            Standalone EXE for testing SWMM clash detection logic with a GUI interface. Ideal for prototyping and debugging SWMM clash scenarios.
+            Stand-alone EXE for testing SWMM clash detection logic with a GUI interface. Ideal for prototyping and debugging SWMM clash scenarios.
           </div>
         </div>
         <div class="action-buttons">
@@ -157,7 +171,7 @@
         <div class="app-content">
           <div class="app-title">SWMM-BOQ</div>
           <div class="app-desc">
-            Utility for generating comprehensive Bill of Quantities from SWMM .inp files—conduit, lateral, structure, backdrop reports with Excel export.
+            Utility for generating a comprehensive Bill of Quantities from SWMM .inp files—conduit, lateral, structure, backdrop reports with Excel export.
           </div>
         </div>
         <div class="action-buttons">
