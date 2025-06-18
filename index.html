@@ -22,19 +22,27 @@
       padding: 32px 24px 24px 24px;
       text-align: center;
     }
+    /* logo + byline */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
     .logo {
       width: 120px;
-      margin-bottom: 22px;
       border-radius: 16px;
       box-shadow: 0 4px 20px rgba(40,40,40,0.12);
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+    }
+    .byline {
+      font-size: 1rem;
+      color: #626e85;
     }
     .app-list {
       list-style: none;
       padding: 0;
-      margin: 24px 0 0 0;
+      margin: 0;
     }
     .app-list li {
       background: #f0f4f8;
@@ -63,38 +71,44 @@
       color: #fff;
       border: none;
       border-radius: 5px;
-      padding: 10px 30px;
-      font-size: 1rem;
+      padding: 10px 20px;
+      font-size: 0.95rem;
       cursor: pointer;
       transition: background 0.2s;
       text-decoration: none;
-      margin-top: 5px;
       box-shadow: 0 2px 8px rgba(35,99,235,0.09);
     }
     .download-btn:hover {
       background: #163780;
     }
     .counter-label {
-      margin-top: 7px;
-      margin-bottom: 0px;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       gap: 6px;
       justify-content: center;
     }
+    .action-buttons {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 8px;
+    }
     @media (max-width: 600px) {
-      .container { padding: 18px 5px 14px 5px; }
-      .app-list li { padding: 11px 6px; }
+      .container { padding: 18px 10px; }
       .app-title { font-size: 1rem; }
+      .download-btn { padding: 8px 16px; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Logo now points to the new repo name -->
-    <img src="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png" alt="Logo" class="logo">
-    <ul class="app-list">
+    <div class="logo-container">
+      <img src="https://github.com/3ngelhawary/Developed-By-Hawary/raw/main/HAWARY.png" alt="Logo" class="logo">
+      <span class="byline">By Hawary</span>
+    </div>
 
+    <ul class="app-list">
       <!-- First Tool -->
       <li>
         <span class="app-title">DETECTPIPECLASHES</span>
@@ -103,6 +117,11 @@
         </span>
         <div class="counter-label">
           <img src="https://img.shields.io/github/downloads/3ngelhawary/DETECT-PIPE-CLASHES/total?label=Downloads&style=flat-square" alt="Download count">
+        </div>
+        <div class="action-buttons">
+          <!-- replace # with your actual URLs -->
+          <a href="#" class="download-btn">LinkedIn</a>
+          <a href="#" class="download-btn">YouTube</a>
         </div>
       </li>
 
@@ -115,6 +134,10 @@
         <div class="counter-label">
           <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-CLASH-TEST/total?label=Downloads&style=flat-square" alt="Download count">
         </div>
+        <div class="action-buttons">
+          <a href="#" class="download-btn">LinkedIn</a>
+          <a href="#" class="download-btn">YouTube</a>
+        </div>
       </li>
 
       <!-- Third Tool -->
@@ -126,8 +149,11 @@
         <div class="counter-label">
           <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-BOQ/total?label=Downloads&style=flat-square" alt="Download count">
         </div>
+        <div class="action-buttons">
+          <a href="#" class="download-btn">LinkedIn</a>
+          <a href="#" class="download-btn">YouTube</a>
+        </div>
       </li>
-
     </ul>
   </div>
 </body>
