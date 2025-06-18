@@ -42,20 +42,29 @@
       padding: 18px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       box-shadow: 0 2px 6px rgba(120,120,120,0.04);
+    }
+    .app-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .app-content {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 16px;
     }
     .app-title {
       font-weight: bold;
       font-size: 1.12rem;
       color: #222;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     .app-desc {
-      font-size: 0.97rem;
+      font-size: 0.95rem;
       color: #626e85;
-      margin-bottom: 16px;
-      max-width: 260px;
     }
     .action-buttons {
       width: 100%;
@@ -64,9 +73,13 @@
       justify-content: space-between;
       gap: 8px;
     }
+    .btn, .counter-img {
+      flex: 1;
+      height: 28px;
+      text-align: center;
+    }
     .btn {
       display: inline-block;
-      height: 28px;
       line-height: 28px;
       border-radius: 4px;
       font-size: 0.9rem;
@@ -76,8 +89,6 @@
       padding: 0 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: background 0.2s;
-      flex: 1;
-      text-align: center;
     }
     .linkedin-btn {
       background: #0A66C2;
@@ -85,16 +96,14 @@
     .linkedin-btn:hover {
       background: #004182;
     }
+    .counter-img {
+      object-fit: contain;
+    }
     .youtube-btn {
       background: #FF0000;
     }
     .youtube-btn:hover {
       background: #CC0000;
-    }
-    .counter-img {
-      height: 28px;
-      flex: 1;
-      object-fit: contain;
     }
     @media (max-width: 800px) {
       .container { padding: 24px; }
@@ -110,9 +119,12 @@
     <ul class="app-list">
       <!-- DETECT-PIPE-CLASHES -->
       <li>
-        <div class="app-title">DETECT-PIPE-CLASHES</div>
-        <div class="app-desc">
-          DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, export-ready for DXF.
+        <img src="PATH_TO_DETECTPIPECLASHES_LOGO" alt="" class="app-logo">
+        <div class="app-content">
+          <div class="app-title">DETECT-PIPE-CLASHES</div>
+          <div class="app-desc">
+            DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, export-ready for DXF.
+          </div>
         </div>
         <div class="action-buttons">
           <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
@@ -124,9 +136,12 @@
 
       <!-- SWMM-CLASH-TEST -->
       <li>
-        <div class="app-title">SWMM-CLASH-TEST</div>
-        <div class="app-desc">
-          Standalone EXE for testing SWMM clash detection logic with a GUI interface. Ideal for prototyping and debugging SWMM clash scenarios.
+        <img src="PATH_TO_SWMM-CLASH-TEST_LOGO" alt="" class="app-logo">
+        <div class="app-content">
+          <div class="app-title">SWMM-CLASH-TEST</div>
+          <div class="app-desc">
+            Standalone EXE for testing SWMM clash detection logic with a GUI interface. Ideal for prototyping and debugging SWMM clash scenarios.
+          </div>
         </div>
         <div class="action-buttons">
           <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
@@ -138,9 +153,12 @@
 
       <!-- SWMM-BOQ -->
       <li>
-        <div class="app-title">SWMM-BOQ</div>
-        <div class="app-desc">
-          Utility for generating comprehensive Bill of Quantities from SWMM .inp files—conduit, lateral, structure, backdrop reports with Excel export.
+        <img src="PATH_TO_SWMM-BOQ_LOGO" alt="" class="app-logo">
+        <div class="app-content">
+          <div class="app-title">SWMM-BOQ</div>
+          <div class="app-desc">
+            Utility for generating comprehensive Bill of Quantities from SWMM .inp files—conduit, lateral, structure, backdrop reports with Excel export.
+          </div>
         </div>
         <div class="action-buttons">
           <a href="YOUR_LINKEDIN_URL" class="btn linkedin-btn">LinkedIn</a>
