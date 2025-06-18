@@ -30,7 +30,7 @@
     }
     .app-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       list-style: none;
       padding: 0;
@@ -70,12 +70,13 @@
       line-height: 28px;
       border-radius: 4px;
       font-size: 0.9rem;
+      font-weight: bold;
       text-decoration: none;
       color: #fff;
       padding: 0 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: background 0.2s;
-      flex: 1; /* allow equal width */
+      flex: 1;
       text-align: center;
     }
     .linkedin-btn {
@@ -97,9 +98,6 @@
     }
     @media (max-width: 800px) {
       .container { padding: 24px; }
-      .app-list { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 500px) {
       .app-list { grid-template-columns: 1fr; }
     }
   </style>
