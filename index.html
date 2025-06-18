@@ -54,8 +54,7 @@
       margin-bottom: 12px;
       max-width: 320px;
     }
-    .download-btn {
-      background: #2363eb;
+    .download-btn, .linkedin-btn, .youtube-btn {
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -64,10 +63,26 @@
       cursor: pointer;
       transition: background 0.2s;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(35,99,235,0.09);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    .download-btn {
+      background: #2363eb;
     }
     .download-btn:hover {
       background: #163780;
+    }
+    .linkedin-btn {
+      background: #0A66C2; /* LinkedIn official blue */
+    }
+    .linkedin-btn:hover {
+      background: #004182;
+    }
+    .youtube-btn {
+      background: #FF0000; /* YouTube official red */
+    }
+    .youtube-btn:hover {
+      background: #CC0000;
     }
     .counter-label {
       margin-bottom: 8px;
@@ -85,7 +100,10 @@
     @media (max-width: 600px) {
       .container { padding: 18px 10px; }
       .app-title { font-size: 1rem; }
-      .download-btn { padding: 8px 16px; font-size: 0.9rem; }
+      .download-btn, .linkedin-btn, .youtube-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -104,8 +122,9 @@
           <img src="https://img.shields.io/github/downloads/3ngelhawary/DETECT-PIPE-CLASHES/total?label=Downloads&style=flat-square" alt="Download count">
         </div>
         <div class="action-buttons">
-          <a href="YOUR_LINKEDIN_URL" class="download-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="download-btn">YouTube</a>
+          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
+          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
+          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
         </div>
       </li>
 
@@ -119,8 +138,9 @@
           <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-CLASH-TEST/total?label=Downloads&style=flat-square" alt="Download count">
         </div>
         <div class="action-buttons">
-          <a href="YOUR_LINKEDIN_URL" class="download-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="download-btn">YouTube</a>
+          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
+          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
+          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
         </div>
       </li>
 
@@ -134,8 +154,9 @@
           <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-BOQ/total?label=Downloads&style=flat-square" alt="Download count">
         </div>
         <div class="action-buttons">
-          <a href="YOUR_LINKEDIN_URL" class="download-btn">LinkedIn</a>
-          <a href="YOUR_YOUTUBE_URL" class="download-btn">YouTube</a>
+          <a href="YOUR_DOWNLOAD_LINK" class="download-btn">Download</a>
+          <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">LinkedIn</a>
+          <a href="YOUR_YOUTUBE_URL" class="youtube-btn">YouTube</a>
         </div>
       </li>
 
