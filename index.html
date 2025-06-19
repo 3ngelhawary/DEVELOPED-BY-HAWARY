@@ -19,7 +19,7 @@
       background:#fff;
       border-radius:12px;
       box-shadow:0 4px 16px rgba(60,60,60,.12);
-      padding:32px 32px 72px;              /* plenty of white space at bottom */
+      padding:32px 32px 72px;
       text-align:center;
     }
     .header-logo{
@@ -33,16 +33,16 @@
       display:grid;
       grid-template-columns:repeat(2,1fr);
       column-gap:20px;
-      row-gap:60px;                         /* ↑ bigger vertical gap */
+      row-gap:60px;
       list-style:none;padding:0;margin:0;
-      grid-auto-rows:1fr;                   /* equal height per row */
+      grid-auto-rows:1fr;
     }
 
     /* ---------- INDIVIDUAL CARD ---------- */
     .app-list li{
       background:#f0f4f8;
       border-radius:8px;
-      padding:18px 18px 10px;               /* ↓ smaller bottom padding */
+      padding:18px 18px 10px;
       display:flex;flex-direction:column;
       align-items:flex-start;height:100%;
       box-shadow:0 2px 6px rgba(120,120,120,.06);
@@ -56,25 +56,23 @@
       font-size:.95rem;color:#626e85;line-height:1.4em;
       overflow:hidden;display:-webkit-box;
       -webkit-line-clamp:3;-webkit-box-orient:vertical;
-      min-height:calc(1.4em*3);            /* exactly 3 lines reserved */
+      min-height:calc(1.4em*3);
     }
 
     /* ---------- BUTTON BAR ---------- */
     .action-buttons{
       width:100%;
       display:flex;align-items:center;justify-content:space-between;
-      gap:8px;margin-top:1.2em;            /* one blank line below desc */
+      gap:8px;margin-top:1.2em;
     }
-    .btn,.counter-img{flex:1;height:28px;text-align:center;}
-    .btn{
-      display:inline-block;line-height:28px;border-radius:4px;
-      font-size:.9rem;font-weight:700;text-decoration:none;color:#fff;
-      padding:0 12px;box-shadow:0 2px 8px rgba(0,0,0,.1);
-      transition:background .2s;
-    }
+    .btn{flex:1;height:28px;display:inline-block;line-height:28px;
+         border-radius:4px;font-size:.9rem;font-weight:700;
+         text-decoration:none;color:#fff;padding:0 12px;
+         box-shadow:0 2px 8px rgba(0,0,0,.1);
+         transition:background .2s;text-align:center;cursor:pointer;}
     .linkedin-btn{background:#0A66C2;} .linkedin-btn:hover{background:#004182;}
     .youtube-btn{background:#FF0000;} .youtube-btn:hover{background:#CC0000;}
-    .counter-img{object-fit:contain;}
+    .download-btn{background:#28a745;} .download-btn:hover{background:#218838;}
 
     /* ---------- MOBILE STACK ---------- */
     @media(max-width:800px){
@@ -82,6 +80,11 @@
       .app-list{grid-template-columns:1fr;}
     }
   </style>
+  <script>
+    function showDownloadPopup() {
+      alert("Please repost the LinkedIn post and leave a comment!");
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -94,14 +97,13 @@
         <div class="app-content">
           <div class="app-title">C3D-CLASH-DETECTION</div>
           <div class="app-desc">
-            DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM&nbsp;.inp). Fast, accurate, export-ready for DXF.
+            DLL for detecting vertical clashes between gravity storm and sewer pipes (SWMM .inp). Fast, accurate, export-ready for DXF.
           </div>
         </div>
         <div class="action-buttons">
           <a href="https://www.linkedin.com/posts/elhawary_civil-3d-clash-detection-activity-7334914075702759424-uHIX?utm_source=share"
              class="btn linkedin-btn" target="_blank" rel="noopener">LinkedIn</a>
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/DETECT-PIPE-CLASHES/total?label=Downloads&style=flat-square"
-               alt="Downloads" class="counter-img">
+          <button type="button" class="btn download-btn" onclick="showDownloadPopup()">Download Now</button>
           <a href="https://www.youtube.com/watch?v=13JCecVUsU0"
              class="btn youtube-btn" target="_blank" rel="noopener">YouTube</a>
         </div>
@@ -118,8 +120,7 @@
         <div class="action-buttons">
           <a href="https://www.linkedin.com/posts/elhawary_swmm-clash-test-activity-7340480683414327298-vEeZ?utm_source=share"
              class="btn linkedin-btn" target="_blank" rel="noopener">LinkedIn</a>
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-CLASH-TEST/total?label=Downloads&style=flat-square"
-               alt="Downloads" class="counter-img">
+          <button type="button" class="btn download-btn" onclick="showDownloadPopup()">Download Now</button>
           <a href="https://www.youtube.com/watch?v=LTb0O4WG8Gk"
              class="btn youtube-btn" target="_blank" rel="noopener">YouTube</a>
         </div>
@@ -130,15 +131,31 @@
         <div class="app-content">
           <div class="app-title">SWMM-BOQ</div>
           <div class="app-desc">
-            Utility for generating a comprehensive Bill of Quantities from SWMM&nbsp;.inp files — conduit, lateral, structure, backdrop reports with Excel export.
+            Utility for generating a comprehensive Bill of Quantities from SWMM .inp files — conduit, lateral, structure, backdrop reports with Excel export.
           </div>
         </div>
         <div class="action-buttons">
           <a href="https://www.linkedin.com/posts/elhawary_swmm-boq-activity-7340738994931937280-NIYN?utm_source=share"
              class="btn linkedin-btn" target="_blank" rel="noopener">LinkedIn</a>
-          <img src="https://img.shields.io/github/downloads/3ngelhawary/SWMM-BOQ/total?label=Downloads&style=flat-square"
-               alt="Downloads" class="counter-img">
+          <button type="button" class="btn download-btn" onclick="showDownloadPopup()">Download Now</button>
           <a href="https://www.youtube.com/watch?v=67W6L0ykyBE"
+             class="btn youtube-btn" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </li>
+
+      <!-- BOQ-NET-C3D (New App) -->
+      <li>
+        <div class="app-content">
+          <div class="app-title">BOQ-NET-C3D</div>
+          <div class="app-desc">
+            DLL utility for generating Bill of Quantities (BOQ) summaries directly from Civil 3D pipe networks.
+          </div>
+        </div>
+        <div class="action-buttons">
+          <a href="https://www.linkedin.com/posts/elhawary_c3dboqutility-dll-boq-activity-7341498743508078592-Dtk6/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA_SNB8BYxRZVJ4HClW_T0Bod-NQc3umznc"
+             class="btn linkedin-btn" target="_blank" rel="noopener">LinkedIn</a>
+          <button type="button" class="btn download-btn" onclick="showDownloadPopup()">Download Now</button>
+          <a href="https://youtu.be/7NxASIwIqys?si=dOWFgyH8wAygROqV"
              class="btn youtube-btn" target="_blank" rel="noopener">YouTube</a>
         </div>
       </li>
